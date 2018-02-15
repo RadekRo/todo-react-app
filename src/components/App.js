@@ -1,6 +1,8 @@
 import React from 'react';
 import '../css/styles.css';
 
+import ToDo from './Todo';
+
 export default class extends React.Component {
 
     state = [
@@ -13,8 +15,8 @@ export default class extends React.Component {
     render() {
 
         return  <React.Fragment>
-            { this.state[0].name }
+                    <ToDo name={ this.state[0].name } isFinished={ this.state[0].isFinished }/>
                 </React.Fragment>
     }
-}
+};
 

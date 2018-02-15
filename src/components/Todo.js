@@ -7,8 +7,9 @@ export default (props) => {
         if (props.isFinished) {
             className += ' crossed' }
 
-        return <ol>
-            <li className={ className }>{ props.name }</li>
-        </ol>
-
+        return <React.Fragment>
+            <ul>
+                <li className={ className }>{ props.name }</li>
+            </ul>
+        </React.Fragment>
 };

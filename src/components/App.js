@@ -17,8 +17,7 @@ export default class extends React.Component {
 
     myCallback = (dataFromAddTodo) => {
         const newTodo = { name: dataFromAddTodo, isFinished: false };
-        const newTodosTable = [...this.state.todos, newTodo];
-        console.log(newTodosTable);
+        this.setState(() => ({ todos: [...this.state.todos, newTodo]}));
     };
 
     render() {

@@ -6,18 +6,22 @@ export default class extends React.Component {
         currentInputValue: ''
     };
 
-    onInputChange = (e) => {
+    onAdded = (input) => {
         this.setState({
-            currentInputValue: e.target.value
-        })
+            currentInputValue: input.target.value
+        });
+    };
+
+    onButtonClick = () => {
+        console.log(this.state.currentInputValue);
     };
 
     render() {
 
         return (<React.Fragment>
             <input type="text"
-                onChange={this.onInputChange}/>
-            <button>Add</button>
+                onChange={this.onAdded}/>
+            <button onClick={this.onButtonClick}>Add</button>
         </React.Fragment>)
 
     }

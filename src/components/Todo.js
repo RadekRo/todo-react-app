@@ -1,7 +1,9 @@
 import React from 'react';
 
 export default (props) => {
+        willReceiveProps() {
 
+    }
         let className = 'text';
 
         if (props.isFinished) {

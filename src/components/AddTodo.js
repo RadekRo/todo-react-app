@@ -13,7 +13,7 @@ export default class extends React.Component {
     };
 
     onButtonClick = () => {
-        console.log(this.state.currentInputValue);
+        this.props.onAdded(this.state.currentInputValue);
     };
 
     render() {

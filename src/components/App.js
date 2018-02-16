@@ -15,14 +15,18 @@ export default class extends React.Component {
         ]
     };
 
-
+    myCallback = (dataFromAddTodo) => {
+        const newTodo = { name: dataFromAddTodo, isFinished: false };
+        const newTodosTable = [...this.state.todos, newTodo];
+        console.log(newTodosTable);
+    };
 
     render() {
 
         return  <React.Fragment>
                 {this.state.todos.map((todo,idx) =>
                     <ToDo name={todo.name} isFinished={todo.isFinished} key={idx}/>)}
-                <AddTodo/>
+                <AddTodo onAdded={this.myCallback}/>
                 </React.Fragment>
     }
 };
